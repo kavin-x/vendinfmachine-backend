@@ -1,6 +1,7 @@
 import pkg from "express";
-import sendProduct from "../Controller/sendProduct.js";
+import sendProduct from "../config/mqtt.js";
+import senddata from "../Controller/add.js";
 
 const Routes = pkg.Router();
-Routes.get("/send",sendProduct);
+Routes.get("/add",senddata);
 export default Routes;
