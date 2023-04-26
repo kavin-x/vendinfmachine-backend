@@ -1,8 +1,7 @@
 import { client } from "../config/mqtt.js";
 
 const senddata=(req,res)=>{
-    console.log(req.body)
-    client.publish('topic',req.body,{},(error)=>{
+    client.publish('topic',JSON.stringify(req.body),{},(error)=>{
         res.send('Message send')
     })
     
